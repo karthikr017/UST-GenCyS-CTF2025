@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where am I? – OSINT Animatic</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    body { background: #181b23; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; }
+    #container { width: 100vw; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .scene {
+      display: none;
+      width: 90vw; max-width: 600px; margin: auto;
+      background: rgba(36,40,55,0.95); border-radius: 20px; box-shadow: 0 6px 32px #0008;
+      padding: 40px 30px; text-align: center; font-size: 1.2rem; line-height: 1.7;
+    }
+    .scene.active { display: block; }
+    h2 { color: #79ffe1; margin-top: 0; }
+    button { margin-top: 25px; background: linear-gradient(90deg, #79ffe1, #fffb7d); color: #181b23; border: none; padding: 10px 30px; border-radius: 8px; font-size: 1.1em; cursor: pointer; }
+    button:hover { background: linear-gradient(90deg, #fffb7d, #79ffe1); }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="scene active">
+      <h2>OSINT Challenge: "Where am I?"</h2>
+      <div>One of the most frustrating and challenging exercises I've ever taken on… but also the most rewarding!</div>
+      <button id="nextBtn">Start</button>
+    </div>
+    <div class="scene"><h2>The Journey Begins</h2><div>I saw the challenge and—bam!—my mind flashed back to the prelims with the GitHub thing. I was instantly in detective mode.<br><br>Twelve straight hours of relentless Googling. I used every trick:<ul style="text-align:left"><li>Google dorking</li><li>Scouring social media</li><li>Hunting for hidden clues</li><li>Deep dives into YouTube, GitHub, and even physical searches!</li></ul></div></div>
+    <div class="scene"><h2>First Hints: Roadblocks</h2><div>Sadly, the initial hints led nowhere. Frustration set in. But then, the next batch of hints dropped—and that's when things clicked!</div></div>
+    <div class="scene"><h2>The Breakthrough</h2><div>The word <b>“gencysstrategy”</b> stood out. I dorked it:<br><code>site:* intext:"gencysstrategy"</code><br>Boom! An Instagram account: <b>@Gencysstrategy</b>.<br>Their bio? A string of emojis—mysterious, but promising:<br><span style="font-size:2em">😘😘😘😘 😍 😍 😘😍😍😘 😘😘😘 😍😍😍😘😘😘 ...</span></div></div>
+    <div class="scene"><h2>Decoded Clues</h2><div>Decoded it. Got a YouTube link:<br><a href="https://youtu.be/vbz2qb_-lny" target="_blank">https://youtu.be/vbz2qb_-lny</a></div></div>
+    <div class="scene"><h2>The Waiting Game</h2><div>There was a technical hiccup—the CTF team had to fix something—so I waited.<br>But heartbreak: they released the YouTube link as a public hint!<br>My 12 hours of hard work felt exposed—but I wasn't giving up.</div></div>
+    <div class="scene"><h2>Deep Dive: The YouTube Trail</h2><div>Opened the video, checked the transcript—found: <b>"z=5000"</b><br>Noticed the channel had a second video. Its captions held a fragment of another YouTube link.<br>That video’s description? Even more clues!<br>I realized: I needed to find latitude and longitude coordinates.</div></div>
+    <div class="scene"><h2>The Web Sleuth</h2><div>Back to the channel. The banner had a URL:<br><b>gencysosintwebpage.app</b><br>Inspected the webpage source—found a comment mentioning /assets/.<br>Navigated to:<br><b>gencysosintwebpage.app/assets/Flag.png</b><br>Downloaded the image. Ran exiftool—discovered an equation in the user comment.</div></div>
+    <div class="scene"><h2>Bringing It All Together</h2><div>Tossed everything into ChatGPT. Out popped coordinates—pointing to the UST campus!</div></div>
+    <div class="scene"><h2>The Last Puzzle Pieces</h2><div>I spent two hours scouring the map. Out of curiosity, I browsed the newest reviews—<br>💥 Base64 string discovered!<br>Decoded it, found a new GitHub link with two repositories.<br>The "Access Denied" repo: full of serious stuff.<br>Got a fake flag—so close!<br>Down to my last flag submission attempt—tension rising!</div></div>
+    <div class="scene"><h2>The Final Stretch</h2><div>Out of options, I checked the repository’s Actions tab. There it was: the precious flag!<br>With just one attempt left, I submitted it.<br><b>Victory! 300 points bagged!</b></div></div>
+    <div class="scene"><h2>The Aftermath</h2><div>Twelve hours of pure detective work, wild goose chases, and a rollercoaster of emotions.<br>But in the end? <b>Totally worth it.</b><br><br><span style="color:#fffb7d; font-weight:bold;">Team Hackson</span></div></div>
+  </div>
+  <script>
+    const scenes = Array.from(document.querySelectorAll('.scene'));
+    let current = 0;
+    const nextBtn = document.getElementById('nextBtn');
+    function showScene(idx) {
+      scenes.forEach(scene => scene.classList.remove('active'));
+      scenes[idx].classList.add('active');
+      gsap.fromTo(scenes[idx], {opacity:0, y:40}, {opacity:1, y:0, duration:0.8, ease:"power2.out"});
+    }
+    function nextScene() {
+      if (current < scenes.length - 1) {
+        gsap.to(scenes[current], {opacity:0, y:-40, duration:0.6, ease:"power2.in", onComplete: () => {
+          current++; showScene(current);
+        }});
+      }
+    }
+    nextBtn.addEventListener('click', nextScene);
+    window.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'ArrowRight') nextScene(); });
+    scenes.forEach((scene, idx) => { if (idx !== 0) scene.addEventListener('click', nextScene); });
+  </script>
+</body>
+</html>
