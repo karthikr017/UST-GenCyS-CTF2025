@@ -1,0 +1,42 @@
+OSINT
+Where am I?- 300 points 
+
+
+One of the most frustrating and challenging exercise I have taken in eternity
+
+The first set of Hints were damn wrong and irrelevant
+
+1.I saw the question and immediately my mind went to the prelims about the GitHub thing(it was also now)
+2.Then I was literally spammming the google for 12 hours straight 
+3.My search included Google dorking, searching in popular social medias and also hidden things!, doing physical search, searching in youtube, GitHub and everywhere
+4.The next set of hints came and that's where things started to clickkkk!!! the word "gencysstrategy" got my mind and I dorked google 
+5.site:* intext:"gencysstrategy" The ultimate prize a Instagram  account with username @Gencysstrategy 
+6.Straight up I saw their bio and the explicitly that emojissss damnnn!!!
+😘😘😘😘 😍 😍 😘😍😍😘 😘😘😘 😍😍😍😘😘😘 😍😘😘😍😘 😍😘😘😍😘 😍😘😍😍 😍😍😍 😘😘😍 😍 😘😘😍 😘😍😘😍😘😍 😍😘😘😘 😘 😍😘😘😍😘 😘😘😘😍 😍😘😘😘 😍😍😘😘 😘😘😍😍😍 😍😍😘😍 😍😘😘😘 😘😘😍😍😘😍 😍😘😘😘😘😍 😘😍😘😘 😍😘 😍😘😍😍
+7.Easily decoded it and got https://youtu.be/vbz2qb_-lny
+8.But the CTF team said there is a technical issue and took some time to resolve it
+9.The next thing broke my heart, they released the link as hint!!! My 12hour Hardwork got laughed
+10.i got the youtube link and saw the video, clicked the transcript and it showed "z=5000"
+and I was blank
+11.Then I noticed the channel has two videos  been uploaded 
+12.The other one had a piece of youtube link in the captions
+13.I got into the link, the youtube video's description spiced up
+14.At that time I thought ALL I need to find is a latitude and Longitude Coordinates
+15.Then as usual I clicked the channel for any other videos and I found a url in the banner ."gencysosintwebpage.app" 
+16 Inspected the webpage and  found a comment mentioning /assets/
+17.got a hidden directory gencysosintwebpage.app/assets/Flag.png
+18.Downloaded the image and Immediately used exiftool and found some equation in the user comment
+19.Mixed all of that in the chatgpt and it gave me the coordinates of UST campus 
+20.That where things  started to slow down , I was there in the map for more than 2 hours 
+21.I was accidently seeing the reviews and filtered to newest 
+22.Boom found a base64 string and decoded it 
+23.Got a GitHub link and it had two repos 
+24."Access Denied" repo has some serious stuffs
+25.i got a fake flag 
+26.Before everything i was bruteforcing the flag and has left with single attempt damn!
+27.I did everything except seeing the actions
+28.Saw it and found the precious flag, but i was also scared what if it's wrong? and i only had single attempt
+29.Gave a try and bagged 300 points 
+30.The 12 hour of fantasy came to an end!!! 
+
+Team Hackson
