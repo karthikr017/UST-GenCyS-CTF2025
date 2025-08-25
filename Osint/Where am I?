@@ -1,225 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>OSINT Challenge: Where am I?</title>
-  <style>
-    body {
-      background: #f7fafd;
-      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 780px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-      padding: 36px 36px 24px 36px;
-      animation: fadein 1.2s;
-    }
-    @keyframes fadein {
-      from {opacity: 0; transform: translateY(40px);}
-      to {opacity: 1; transform: none;}
-    }
-    h1 {
-      font-size: 2.3em;
-      color: #234ea4;
-      margin-top: 0;
-      letter-spacing: 2px;
-    }
-    h2 {
-      color: #3e7acb;
-      margin-bottom: 8px;
-      margin-top: 36px;
-    }
-    .subtitle {
-      color: #555;
-      font-size: 1.2em;
-      margin-bottom: 24px;
-      margin-top: -8px;
-      font-style: italic;
-    }
-    .section {
-      margin-bottom: 24px;
-      padding-left: 10px;
-      border-left: 4px solid #e0e7fa;
-    }
-    ul.timeline {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.timeline li {
-      margin-bottom: 18px;
-      padding-left: 22px;
-      position: relative;
-      font-size: 1.06em;
-      line-height: 1.6;
-    }
-    ul.timeline li:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 10px;
-      height: 10px;
-      background: #3e7acb;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      box-shadow: 0 0 0 2px #d0e1fa;
-    }
-    .highlight {
-      background: #f2f4ff;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-family: 'Menlo', 'Consolas', monospace;
-      color: #204080;
-      margin: 10px 0;
-      display: inline-block;
-    }
-    .emoji {
-      font-size: 1.4em;
-      vertical-align: middle;
-    }
-    .team {
-      text-align: right;
-      font-size: 1.12em;
-      color: #666;
-      margin-top: 36px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-    }
-    a {
-      color: #234ea4;
-      text-decoration: none;
-      border-bottom: 1px dashed #aaa;
-      transition: border 0.2s;
-    }
-    a:hover {
-      border-bottom: 2px solid #3e7acb;
-      color: #3169c6;
-    }
-    blockquote {
-      background: #f5f7ff;
-      border-left: 5px solid #aac6f8;
-      color: #444;
-      margin: 18px 0;
-      padding: 12px 30px 12px 20px;
-      font-style: italic;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 18px 6px;
-      }
-      h1 { font-size: 1.4em; }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>OSINT Challenge: "Where am I?" <span class="emoji">🕵️‍♂️</span></h1>
-    <div class="subtitle">
-      300 Points &mdash; A Wild Ride of Digital Sleuthing!
-    </div>
+OSINT Challenge: "Where am I?" – 300 Points
+One of the most frustrating and challenging exercises I’ve ever taken on… but also the most rewarding!
 
-    <blockquote>
-      One of the most frustrating and challenging exercises I’ve ever taken on… but also the most rewarding!
-    </blockquote>
+🌟 The Journey Begins
+I saw the challenge and—bam!—my mind flashed back to the prelims with the GitHub thing. I was instantly in detective mode.
 
-    <div class="section">
-      <h2>🌟 The Journey Begins</h2>
-      <ul class="timeline">
-        <li>Saw the challenge and—bam!—my mind flashed back to the GitHub prelims. Instantly in detective mode.</li>
-        <li>What followed? <b>12 straight hours</b> of relentless Googling: <span class="highlight">Google dorking</span>, social media, YouTube, GitHub, even physical searches!</li>
-      </ul>
-    </div>
+What followed? Twelve straight hours of relentless Googling. I used every trick in the book:
 
-    <div class="section">
-      <h2>🚦 First Hints: Roadblocks</h2>
-      <ul class="timeline">
-        <li>The initial hints were misleading and frustrating.</li>
-        <li>Then, the next batch of hints dropped—<b>and that’s when things clicked!</b></li>
-      </ul>
-    </div>
+Google dorking
+Scouring social media
+Hunting for hidden clues
+Deep dives into YouTube, GitHub, and even physical searches!
+🚦 First Hints: Roadblocks
+Sadly, the initial hints led nowhere. Frustration set in. But then, the next batch of hints dropped—and that's when things clicked!
 
-    <div class="section">
-      <h2>🔑 The Breakthrough</h2>
-      <ul class="timeline">
-        <li>The word <span class="highlight">gencysstrategy</span> stood out. Time for Google dorking:</li>
-        <li class="highlight">site:* intext:"gencysstrategy"</li>
-        <li>Result: Instagram account <b>@Gencysstrategy</b> with a bio full of mysterious emojis:<br>
-          <span class="highlight">😘😘😘😘 😍 😍 😘😍😍😘 😘😘😘 😍😍😍😘😘😘 ...</span>
-        </li>
-        <li>Decoded the emoji string to get a YouTube link: <a href="https://youtu.be/vbz2qb_-lny" target="_blank">https://youtu.be/vbz2qb_-lny</a></li>
-      </ul>
-    </div>
+🔑 The Breakthrough
+The word “gencysstrategy” stood out. I dorked it:
+site:* intext:"gencysstrategy"
 
-    <div class="section">
-      <h2>⏳ The Waiting Game</h2>
-      <ul class="timeline">
-        <li>Technical issues delayed progress, but soon the YouTube link was released as a public hint.</li>
-        <li>My 12 hours of hard work felt exposed—but I wasn’t giving up yet!</li>
-      </ul>
-    </div>
+Boom! An Instagram account: @Gencysstrategy.
+Their bio? A string of emojis—mysterious, but promising:
 
-    <div class="section">
-      <h2>🕵️‍♂️ Deep Dive: The YouTube Trail</h2>
-      <ul class="timeline">
-        <li>Opened the video, checked the transcript—found: <span class="highlight">z=5000</span></li>
-        <li>Noticed a second video on the channel, its captions held a fragment of another YouTube link.</li>
-        <li>That video’s description? Even more clues appeared!</li>
-        <li>Realized: I needed to find latitude and longitude coordinates.</li>
-      </ul>
-    </div>
+😘😘😘😘 😍 😍 😘😍😍😘 😘😘😘 😍😍😍😘😘😘 ...and more.
 
-    <div class="section">
-      <h2>🖥️ The Web Sleuth</h2>
-      <ul class="timeline">
-        <li>Channel banner had a URL: <span class="highlight">gencysosintwebpage.app</span></li>
-        <li>Inspected the webpage source—found a comment mentioning <span class="highlight">/assets/</span>.</li>
-        <li>Discovered a hidden directory: <span class="highlight">gencysosintwebpage.app/assets/Flag.png</span></li>
-        <li>Downloaded the image, ran <span class="highlight">exiftool</span>—discovered an equation in the user comment.</li>
-      </ul>
-    </div>
+Decoded it. Got a YouTube link:
+https://youtu.be/vbz2qb_-lny
 
-    <div class="section">
-      <h2>🤖 Bringing It All Together</h2>
-      <ul class="timeline">
-        <li>Piled all clues into ChatGPT. Out popped coordinates—pointing to the UST campus!</li>
-      </ul>
-    </div>
+⏳ The Waiting Game
+There was a technical hiccup—the CTF team had to fix something—so I waited.
+But heartbreak: they released the YouTube link as a public hint!
+My 12 hours of hard work felt exposed—but I wasn't giving up.
 
-    <div class="section">
-      <h2>🗺️ The Last Puzzle Pieces</h2>
-      <ul class="timeline">
-        <li>Spent 2 hours scouring the map. Out of curiosity, browsed the newest reviews—</li>
-        <li><b>💥 Base64 string discovered!</b> Decoded it, found a GitHub link with two repositories.</li>
-        <li>"Access Denied" repo: full of serious stuff. Got a fake flag—so close!</li>
-        <li>Down to my last flag submission attempt—tension rising!</li>
-      </ul>
-    </div>
+🕵️‍♂️ Deep Dive: The YouTube Trail
+Opened the video, checked the transcript—found: "z=5000"
+Noticed the channel had a second video. Its captions held a fragment of another YouTube link.
+That video’s description? Even more clues!
+I realized: I needed to find latitude and longitude coordinates.
 
-    <div class="section">
-      <h2>🏁 The Final Stretch</h2>
-      <ul class="timeline">
-        <li>Checked the repository’s <b>Actions</b> tab. There it was: <b>the precious flag!</b></li>
-        <li>With one attempt left, submitted it. <span class="emoji">🎉</span> <b>Victory! 300 points bagged!</b></li>
-      </ul>
-    </div>
+🖥️ The Web Sleuth
+Back to the channel. The banner had a URL:
+gencysosintwebpage.app
 
-    <div class="section">
-      <blockquote>
-        12 hours of pure detective work, wild goose chases, and a rollercoaster of emotions.<br>
-        But in the end? <b>Totally worth it.</b>
-      </blockquote>
-    </div>
+Inspected the webpage source—found a comment mentioning /assets/.
 
-    <div class="team">
-      — Team Hackson
-    </div>
-  </div>
-</body>
-</html>
+Navigated to:
+gencysosintwebpage.app/assets/Flag.png
+
+Downloaded the image. Ran exiftool—discovered an equation in the user comment.
+
+🤖 Bringing It All Together
+Tossed everything into ChatGPT. Out popped coordinates—pointing to the UST campus!
+
+🗺️ The Last Puzzle Pieces
+I spent two hours scouring the map. Out of curiosity, I browsed the newest reviews—
+💥 Base64 string discovered!
+Decoded it, found a new GitHub link with two repositories.
+
+The "Access Denied" repo: full of serious stuff.
+Got a fake flag—so close!
+Down to my last flag submission attempt—tension rising!
+🏁 The Final Stretch
+Out of options, I checked the repository’s Actions tab. There it was: the precious flag!
+
+With just one attempt left, I submitted it.
+Victory! 300 points bagged!
+
+🎉 The Aftermath
+Twelve hours of pure detective work, wild goose chases, and a rollercoaster of emotions.
+But in the end? Totally worth it.
+
+Team Hackson
